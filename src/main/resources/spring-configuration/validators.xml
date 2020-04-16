@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="doubleGreaterThanZeroValidator"
+          class="org.bardframework.validator.field.number.DoubleGreaterThanZeroValidator"/>
+
+    <bean id="mustNotNullValidator" class="org.bardframework.validator.field.common.MustNotNullValidator"/>
+    <bean id="mustNullValidator" class="org.bardframework.validator.field.common.MustNullValidator"/>
+
+    <bean id="uuidValidator" class="org.bardframework.validator.field.common.UuidValidator"/>
+    <bean id="timeUuidValidator" class="org.bardframework.validator.field.common.TimeUuidValidator"/>
+    <bean id="collectionUuidValidator" class="org.bardframework.validator.field.collection.CollectionUuidValidator"/>
+    <bean id="collectionTimeUuidValidator"
+          class="org.bardframework.validator.field.collection.CollectionTimeUuidValidator"/>
+
+    <bean id="textNotEmptyValidator" class="org.bardframework.validator.field.common.TextNotEmptyValidator"/>
+
+    <bean id="fromTodayDateValidator"
+          class="org.bardframework.validator.field.datetime.FromTodayDateValidator"/>
+    <bean id="fromNowDateTimeValidator"
+          class="org.bardframework.validator.field.datetime.FromNowDateTimeValidator"/>
+
+    <bean id="untilTodayDateValidator"
+          class="org.bardframework.validator.field.datetime.UntilTodayDateValidator"/>
+    <bean id="untilNowDateTimeValidator"
+          class="org.bardframework.validator.field.datetime.UntilNowDateTimeValidator"/>
+
+    <bean id="inFutureDateValidator"
+          class="org.bardframework.validator.field.datetime.FutureDateValidator"/>
+    <bean id="inFutureDateTimeValidator"
+          class="org.bardframework.validator.field.datetime.FutureDateTimeValidator"/>
+
+    <bean id="inPastDateValidator"
+          class="org.bardframework.validator.field.datetime.PastDateValidator"/>
+    <bean id="inPastDateTimeValidator"
+          class="org.bardframework.validator.field.datetime.PastDateTimeValidator"/>
+</beans>
