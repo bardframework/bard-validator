@@ -12,6 +12,7 @@ import org.springframework.validation.SmartValidator;
 
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.stream.Collectors;
 
 /**
  * Created by zafari on 10/4/2015.
@@ -73,7 +74,6 @@ public class BardSmartValidator implements SmartValidator {
             return;
         }
         Set<Class<?>> targetValidatorClasses = new HashSet<>();
-//        ReflectionUtils.
         /*
           converting validationHints to Class<? extends ValidatorGroup>
          */
@@ -84,6 +84,10 @@ public class BardSmartValidator implements SmartValidator {
                 throw new IllegalArgumentException("validation groups must be sub class of ValidatorGroup, Class<? extends ValidatorGroup>");
             }
         }
+        /*
+            add all super class & interface of Validators as validator
+         */
+        targetValidatorClasses = targetValidatorClasses.stream().map(aClass -> ReflectionUtils.getSupersOf(aClass, true, true, false)).flatMap(Collection::stream).collect(Collectors.toSet());
         /*
           select affected validators
          */
