@@ -17,7 +17,7 @@
 
     <properties>
         <assertj.version>3.16.1</assertj.version>
-        <bard.commons.version>0.3.1</bard.commons.version>
+        <bardframework.version>0.3.1</bardframework.version>
         <junit-jupiter.version>5.6.2</junit-jupiter.version>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
@@ -31,12 +31,12 @@
         <dependency>
             <groupId>org.bardframework.commons</groupId>
             <artifactId>common-reflection</artifactId>
-            <version>${bard.commons.version}</version>
+            <version>${bardframework.version}</version>
         </dependency>
         <dependency>
             <groupId>org.bardframework.commons</groupId>
             <artifactId>common-utils</artifactId>
-            <version>${bard.commons.version}</version>
+            <version>${bardframework.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
