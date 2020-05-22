@@ -5,6 +5,7 @@ import org.bardframework.validator.Validator;
 
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * Created by Vahid Zafari on 5/12/2016.
@@ -12,10 +13,12 @@ import java.util.Map;
 public class FieldValidatorHolder implements ValidatorHolder {
 
     private final Class<?> group;
-    private Map<String, List<Validator<?>>> validators;
+    private final Map<String, List<Validator<?>>> validators;
 
     public FieldValidatorHolder(Class<?> group) {
+        AssertionUtils.notNull(group, "null group not acceptable");
         this.group = group;
+        this.validators = new ConcurrentHashMap<>();
     }
 
     public FieldValidatorHolder(Class<?> group, Map<String, List<Validator<?>>> validators) {
@@ -33,7 +36,7 @@ public class FieldValidatorHolder implements ValidatorHolder {
         return validators;
     }
 
-    public void setValidators(Map<String, List<Validator<?>>> validators) {
-        this.validators = validators;
+    public void addValidators(String fieldName, List<Validator<?>> validators) {
+        this.validators.put(fieldName, validators);
     }
 }
