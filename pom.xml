@@ -11,7 +11,7 @@
 
     <groupId>org.bardframework.validator</groupId>
     <artifactId>bard-validator</artifactId>
-    <version>0.3.2</version>
+    <version>0.3.3</version>
 
     <packaging>jar</packaging>
 
@@ -23,7 +23,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <slf4j.version>1.7.30</slf4j.version>
-        <spring-framework.version>5.2.6.RELEASE</spring-framework.version>
+        <spring-framework.version>5.2.7.RELEASE</spring-framework.version>
     </properties>
 
     <dependencies>
