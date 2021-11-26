@@ -16,7 +16,7 @@
     <packaging>jar</packaging>
 
     <properties>
-        <bardframeowrk.commons.version>0.9.5</bardframeowrk.commons.version>
+        <bardframework.commons.version>0.9.5</bardframework.commons.version>
         <assertj.version>3.21.0</assertj.version>
         <junit-jupiter.version>5.8.1</junit-jupiter.version>
         <slf4j.version>1.7.32</slf4j.version>
@@ -27,12 +27,12 @@
         <dependency>
             <groupId>org.bardframework.commons</groupId>
             <artifactId>common-reflection</artifactId>
-            <version>${bardframeowrk.commons.version}</version>
+            <version>${bardframework.commons.version}</version>
         </dependency>
         <dependency>
             <groupId>org.bardframework.commons</groupId>
             <artifactId>common-utils</artifactId>
-            <version>${bardframeowrk.commons.version}</version>
+            <version>${bardframework.commons.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
