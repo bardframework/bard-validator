@@ -1,7 +1,6 @@
 package org.bardframework.validator;
 
 import org.bardframework.commons.reflection.ReflectionUtils;
-import org.bardframework.commons.utils.HtmlUtils;
 import org.bardframework.validator.exception.BardValidationException;
 import org.bardframework.validator.holder.ValidatorHolder;
 import org.slf4j.Logger;
@@ -9,6 +8,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.Errors;
 import org.springframework.validation.SmartValidator;
+import org.springframework.web.util.HtmlUtils;
 
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;

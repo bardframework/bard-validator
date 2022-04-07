@@ -1,7 +1,7 @@
 package org.bardframework.validator.field.common;
 
+import org.apache.commons.lang3.RandomStringUtils;
 import org.assertj.core.api.Assertions;
-import org.bardframework.commons.utils.RandomStringUtils;
 import org.junit.jupiter.api.Test;
 
 class TextLengthValidatorTest {
