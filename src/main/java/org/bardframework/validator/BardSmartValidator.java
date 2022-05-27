@@ -1,6 +1,6 @@
 package org.bardframework.validator;
 
-import org.bardframework.commons.reflection.ReflectionUtils;
+import org.bardframework.commons.utils.ReflectionUtils;
 import org.bardframework.validator.exception.BardValidationException;
 import org.bardframework.validator.holder.ValidatorHolder;
 import org.slf4j.Logger;
