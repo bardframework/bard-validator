@@ -67,7 +67,7 @@ public class BardSmartValidator implements SmartValidator {
             if (validatorsMap.containsKey(targetValidatorClass)) {
                 this.validate(errors, target, validatorsMap.get(targetValidatorClass));
             } else {
-                LOGGER.error("validator[{}] not exist, maybe not defined as spring validators", targetValidatorClasses);
+                LOGGER.warn("validator[{}] not exist, maybe not defined as spring validators", targetValidatorClasses);
             }
         }
         if (validatorsMap.containsKey(target.getClass())) {
