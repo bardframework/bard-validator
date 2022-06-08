@@ -34,10 +34,10 @@ public class FieldValueHolder<T> {
 
     public String translateFieldName(MessageSource messageSource, Locale locale) {
         if (null == messageSource) {
-            LOGGER.error("null messageSource [{}] in translate field name", messageSource);
+            LOGGER.error("null messageSource [{}] in translate field name", (Object) null);
         }
         if (null == locale) {
-            LOGGER.error("null locale [{}] in translate field name", locale);
+            LOGGER.error("null locale [{}] in translate field name", (Object) null);
         }
         return value + " is not acceptable for " + field;
     }
