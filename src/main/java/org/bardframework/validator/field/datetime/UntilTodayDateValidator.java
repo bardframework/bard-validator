@@ -4,7 +4,7 @@ import org.bardframework.validator.FieldValueHolder;
 import org.bardframework.validator.field.SingleFieldValidatorAbstract;
 
 import java.time.LocalDate;
-import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -28,6 +28,6 @@ public class UntilTodayDateValidator extends SingleFieldValidatorAbstract<LocalD
 
     @Override
     protected List<Object> getArgs(FieldValueHolder<LocalDate> fieldValue) {
-        return Arrays.asList(fieldValue.translateFieldName(messageSource, this.getLocale()));
+        return Collections.singletonList(fieldValue.translateFieldName(messageSource, this.getLocale()));
     }
 }

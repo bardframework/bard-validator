@@ -4,7 +4,7 @@ import org.bardframework.validator.FieldValueHolder;
 import org.bardframework.validator.field.SingleFieldValidatorAbstract;
 import org.springframework.validation.Errors;
 
-import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 import java.util.regex.Pattern;
 
@@ -41,6 +41,6 @@ public class RegexValidator extends SingleFieldValidatorAbstract<Object> {
 
     @Override
     protected List<Object> getArgs(FieldValueHolder<Object> fieldValue) {
-        return Arrays.asList(fieldValue.translateFieldName(messageSource, this.getLocale()));
+        return Collections.singletonList(fieldValue.translateFieldName(messageSource, this.getLocale()));
     }
 }

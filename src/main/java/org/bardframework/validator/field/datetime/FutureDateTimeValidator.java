@@ -4,7 +4,7 @@ import org.bardframework.validator.FieldValueHolder;
 import org.bardframework.validator.field.SingleFieldValidatorAbstract;
 
 import java.time.LocalDateTime;
-import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -27,6 +27,6 @@ public class FutureDateTimeValidator extends SingleFieldValidatorAbstract<LocalD
 
     @Override
     protected List<Object> getArgs(FieldValueHolder<LocalDateTime> fieldValue) {
-        return Arrays.asList(fieldValue.translateFieldName(messageSource, this.getLocale()));
+        return Collections.singletonList(fieldValue.translateFieldName(messageSource, this.getLocale()));
     }
 }
