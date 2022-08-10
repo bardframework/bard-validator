@@ -11,12 +11,12 @@
 
     <groupId>org.bardframework.validator</groupId>
     <artifactId>bard-validator</artifactId>
-    <version>1.4.30</version>
+    <version>1.5.10</version>
 
     <packaging>jar</packaging>
 
     <properties>
-        <bardframework.commons.version>1.4.26</bardframework.commons.version>
+        <bardframework.commons.version>1.5.6</bardframework.commons.version>
         <spring-boot-dependencies.version>2.7.2</spring-boot-dependencies.version>
     </properties>
 
