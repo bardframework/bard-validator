@@ -31,6 +31,6 @@ public class TextLengthValidator extends SingleFieldValidatorAbstract<String> {
 
     @Override
     protected List<Object> getArgs(FieldValueHolder<String> fieldValue) {
-        return Arrays.asList(fieldValue.translateFieldName(messageSource, this.getLocale()), min, max);
+        return List.of(fieldValue.translateFieldName(messageSource, this.getLocale()), min, max);
     }
 }

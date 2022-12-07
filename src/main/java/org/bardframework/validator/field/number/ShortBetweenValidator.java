@@ -30,6 +30,6 @@ public class ShortBetweenValidator extends SingleFieldValidatorAbstract<Short> {
 
     @Override
     protected List<Object> getArgs(FieldValueHolder<Short> fieldValue) {
-        return Arrays.asList(fieldValue.translateFieldName(messageSource, this.getLocale()), min, max);
+        return List.of(fieldValue.translateFieldName(messageSource, this.getLocale()), min, max);
     }
 }

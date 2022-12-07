@@ -3,7 +3,6 @@ package org.bardframework.validator.field.common;
 import org.bardframework.validator.FieldValueHolder;
 import org.bardframework.validator.field.TwoFieldCompareValidatorAbstract;
 
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
@@ -35,6 +34,6 @@ public class GreaterThanFieldValidator extends TwoFieldCompareValidatorAbstract 
 
     @Override
     protected List<Object> getArgs(FieldValueHolder<?> fieldValue, FieldValueHolder<?> otherValue) {
-        return Arrays.asList(fieldValue.translateFieldName(messageSource, this.getLocale()), otherValue.translateFieldName(messageSource, this.getLocale()));
+        return List.of(fieldValue.translateFieldName(messageSource, this.getLocale()), otherValue.translateFieldName(messageSource, this.getLocale()));
     }
 }

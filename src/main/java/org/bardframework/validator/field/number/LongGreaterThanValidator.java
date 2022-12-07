@@ -3,7 +3,6 @@ package org.bardframework.validator.field.number;
 import org.bardframework.validator.FieldValueHolder;
 import org.bardframework.validator.field.SingleFieldValidatorAbstract;
 
-import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -28,6 +27,6 @@ public class LongGreaterThanValidator extends SingleFieldValidatorAbstract<Long>
 
     @Override
     protected List<Object> getArgs(FieldValueHolder<Long> fieldValue) {
-        return Arrays.asList(fieldValue.translateFieldName(messageSource, this.getLocale()), min);
+        return List.of(fieldValue.translateFieldName(messageSource, this.getLocale()), min);
     }
 }
