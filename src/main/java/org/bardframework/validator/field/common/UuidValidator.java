@@ -26,7 +26,7 @@ public class UuidValidator extends SingleFieldValidatorAbstract<String> {
             UUID.fromString(value);
             return true;
         } catch (Exception e) {
-            LOGGER.debug("invalid uuid [{}].", value);
+            log.debug("invalid uuid [{}].", value);
             return false;
         }
     }

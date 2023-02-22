@@ -16,7 +16,7 @@ import java.util.Locale;
 public abstract class ValidatorAbstract<T> implements Validator<T> {
 
     protected final String errorCode;
-    protected final Logger LOGGER = LoggerFactory.getLogger(this.getClass());
+    protected final Logger log = LoggerFactory.getLogger(this.getClass());
     @Autowired
     protected MessageSource messageSource;
 

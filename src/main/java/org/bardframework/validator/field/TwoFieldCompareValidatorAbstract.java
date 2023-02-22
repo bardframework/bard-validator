@@ -35,7 +35,7 @@ public abstract class TwoFieldCompareValidatorAbstract extends ValidatorAbstract
             return;
         }
         if (null == args || 1 != args.size()) {
-            LOGGER.error("error when validation '{}' value of '{}'.\n validator required one and only one args.\n this args not acceptable [{}]", fieldValue.getValue(), fieldValue.getField(), args);
+            log.error("error when validation '{}' value of '{}'.\n validator required one and only one args.\n this args not acceptable [{}]", fieldValue.getValue(), fieldValue.getField(), args);
             throw new IllegalStateException("error when validation.");
         }
         FieldValueHolder<?> otherValue = args.get(0);
@@ -43,7 +43,7 @@ public abstract class TwoFieldCompareValidatorAbstract extends ValidatorAbstract
             return;
         }
         if (!(otherValue.getValue() instanceof Comparable)) {
-            LOGGER.error("error when validation '{}' value of '{}'.\nvalidator args must be of type comparator.\n [{}] not valid.", fieldValue.getValue(), fieldValue.getField(), otherValue.getValue());
+            log.error("error when validation '{}' value of '{}'.\nvalidator args must be of type comparator.\n [{}] not valid.", fieldValue.getValue(), fieldValue.getField(), otherValue.getValue());
             throw new IllegalStateException("error when validation.");
         }
         if (null == fieldValue.getValue()) {

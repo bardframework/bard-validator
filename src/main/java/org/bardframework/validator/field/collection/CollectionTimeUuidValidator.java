@@ -27,14 +27,14 @@ public class CollectionTimeUuidValidator extends SingleFieldValidatorAbstract<Co
             for (String uuidString : collection) {
                 UUID uuid = UUID.fromString(uuidString);
                 if (uuid.version() != 1) {
-                    LOGGER.debug("invalid uuid in list, [{}] is not time uuid", uuidString);
+                    log.debug("invalid uuid in list, [{}] is not time uuid", uuidString);
                     return false;
                 }
 
             }
             return true;
         } catch (Exception e) {
-            LOGGER.debug("invalid uuid in list [{}]", collection);
+            log.debug("invalid uuid in list [{}]", collection);
             return false;
         }
     }

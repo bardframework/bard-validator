@@ -12,7 +12,7 @@ import java.util.Locale;
  */
 public class FieldValueHolder<T> {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(FieldValueHolder.class);
+    private static final Logger log = LoggerFactory.getLogger(FieldValueHolder.class);
     private final String field;
     private final Class<?> clazz;
     private final T value;
@@ -34,10 +34,10 @@ public class FieldValueHolder<T> {
 
     public String translateFieldName(MessageSource messageSource, Locale locale) {
         if (null == messageSource) {
-            LOGGER.error("null messageSource [{}] in translate field name", (Object) null);
+            log.error("null messageSource [{}] in translate field name", (Object) null);
         }
         if (null == locale) {
-            LOGGER.error("null locale [{}] in translate field name", (Object) null);
+            log.error("null locale [{}] in translate field name", (Object) null);
         }
         return value + " is not acceptable for " + field;
     }

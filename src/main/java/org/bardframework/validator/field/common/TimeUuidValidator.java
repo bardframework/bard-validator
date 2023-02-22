@@ -25,13 +25,13 @@ public class TimeUuidValidator extends SingleFieldValidatorAbstract<String> {
         try {
             UUID uuid = UUID.fromString(value);
             if (1 != uuid.version()) {
-                LOGGER.debug("[{}] is not time uuid", value);
+                log.debug("[{}] is not time uuid", value);
                 return false;
             } else {
                 return true;
             }
         } catch (Exception e) {
-            LOGGER.debug("invalid uuid [{}].", value);
+            log.debug("invalid uuid [{}].", value);
             return false;
         }
     }

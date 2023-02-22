@@ -27,7 +27,7 @@ public class CollectionUuidValidator extends SingleFieldValidatorAbstract<Collec
             collection.forEach(UUID::fromString);
             return true;
         } catch (Exception e) {
-            LOGGER.debug("invalid uuid in list [{}]", collection);
+            log.debug("invalid uuid in list [{}]", collection);
             return false;
         }
     }

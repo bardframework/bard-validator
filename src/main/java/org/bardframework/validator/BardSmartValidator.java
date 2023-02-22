@@ -19,7 +19,7 @@ import java.util.stream.Collectors;
  */
 public class BardSmartValidator implements SmartValidator {
 
-    protected static final Logger LOGGER = LoggerFactory.getLogger(BardSmartValidator.class);
+    protected static final Logger log = LoggerFactory.getLogger(BardSmartValidator.class);
 
     private final Map<Class<?>, ValidatorHolder> validatorsMap;
     private final Map<Class<?>, List<Class<?>>> superClasses = new ConcurrentHashMap<>();
@@ -28,7 +28,7 @@ public class BardSmartValidator implements SmartValidator {
         this.validatorsMap = new ConcurrentHashMap<>();
         for (ValidatorHolder validatorHolder : validatorHolders) {
             if (this.validatorsMap.containsKey(validatorHolder.getGroup())) {
-                LOGGER.error("validator with group [{}] define multiple, ignoring previous validators (use last of them)", validatorHolder.getGroup());
+                log.error("validator with group [{}] define multiple, ignoring previous validators (use last of them)", validatorHolder.getGroup());
             }
             this.validatorsMap.put(validatorHolder.getGroup(), validatorHolder);
         }
@@ -42,7 +42,7 @@ public class BardSmartValidator implements SmartValidator {
     @Override
     public void validate(Object target, Errors errors, Object... validationHints) {
         if (1 > validationHints.length || null == validationHints[0]) {
-            LOGGER.warn("no validation specified for '{}', maybe no validation group specified in @Validated annotation.", target);
+            log.warn("no validation specified for '{}', maybe no validation group specified in @Validated annotation.", target);
             return;
         }
         Set<Class<?>> targetValidatorClasses = new HashSet<>();
@@ -67,7 +67,7 @@ public class BardSmartValidator implements SmartValidator {
             if (validatorsMap.containsKey(targetValidatorClass)) {
                 this.validate(errors, target, validatorsMap.get(targetValidatorClass));
             } else {
-                LOGGER.warn("validator[{}] not exist, maybe not defined as spring validators", targetValidatorClasses);
+                log.warn("validator[{}] not exist, maybe not defined as spring validators", targetValidatorClasses);
             }
         }
         if (validatorsMap.containsKey(target.getClass())) {
@@ -79,7 +79,7 @@ public class BardSmartValidator implements SmartValidator {
     }
 
     private void validate(Errors errors, Object target, ValidatorHolder holder) {
-        LOGGER.debug("start validating [{}], groups: [{}]", target.getClass(), holder.getGroup());
+        log.debug("start validating [{}], groups: [{}]", target.getClass(), holder.getGroup());
         Object value;
         for (String property : holder.getValidators().keySet()) {
             if (errors.hasFieldErrors(property)) {
@@ -103,7 +103,7 @@ public class BardSmartValidator implements SmartValidator {
                 }
             }
         }
-        LOGGER.debug("validating [{}] by group [{}] finished", target.getClass(), holder.getGroup());
+        log.debug("validating [{}] by group [{}] finished", target.getClass(), holder.getGroup());
     }
 
     @Override
@@ -115,7 +115,7 @@ public class BardSmartValidator implements SmartValidator {
         try {
             return ReflectionUtils.getPropertyValue(target, property);
         } catch (Exception e) {
-            LOGGER.error("validation problem : get value of '{}' from '{}' failed.", property, target, e);
+            log.error("validation problem : get value of '{}' from '{}' failed.", property, target, e);
             errors.reject("validation_exception");
             return null;
         }
