@@ -3,7 +3,6 @@ package org.bardframework.validator.field.common;
 import org.bardframework.validator.FieldValueHolder;
 import org.bardframework.validator.field.SingleFieldValidatorAbstract;
 
-import java.util.Arrays;
 import java.util.List;
 
 /**
