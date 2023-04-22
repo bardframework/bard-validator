@@ -1,7 +1,5 @@
 package org.bardframework.validator;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.NotReadablePropertyException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
@@ -16,7 +14,6 @@ import java.util.Locale;
 public abstract class ValidatorAbstract<T> implements Validator<T> {
 
     protected final String errorCode;
-    protected final Logger log = LoggerFactory.getLogger(this.getClass());
     @Autowired
     protected MessageSource messageSource;
 

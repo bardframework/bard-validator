@@ -1,7 +1,6 @@
 package org.bardframework.validator;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.MessageSource;
 
 import java.util.Locale;
@@ -10,9 +9,9 @@ import java.util.Locale;
 /**
  * Created by Vahid Zafari on 5/27/2017.
  */
+@Slf4j
 public class FieldValueHolder<T> {
 
-    private static final Logger log = LoggerFactory.getLogger(FieldValueHolder.class);
     private final String field;
     private final Class<?> clazz;
     private final T value;

@@ -1,5 +1,6 @@
 package org.bardframework.validator.field;
 
+import lombok.extern.slf4j.Slf4j;
 import org.bardframework.validator.FieldValueHolder;
 import org.bardframework.validator.ValidatorAbstract;
 import org.springframework.validation.Errors;
@@ -10,6 +11,7 @@ import java.util.List;
 /**
  * Created by zafari on 10/7/2015.
  */
+@Slf4j
 public abstract class TwoFieldCompareValidatorAbstract extends ValidatorAbstract<Comparable<?>> {
 
     private String other;

@@ -1,5 +1,6 @@
 package org.bardframework.validator.field.collection;
 
+import lombok.extern.slf4j.Slf4j;
 import org.bardframework.validator.FieldValueHolder;
 import org.bardframework.validator.field.SingleFieldValidatorAbstract;
 
@@ -11,6 +12,7 @@ import java.util.UUID;
 /**
  * Created by v.zafari on 30/01/2016.
  */
+@Slf4j
 public class CollectionTimeUuidValidator extends SingleFieldValidatorAbstract<Collection<String>> {
 
     public CollectionTimeUuidValidator() {

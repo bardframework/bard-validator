@@ -1,10 +1,9 @@
 package org.bardframework.validator;
 
+import lombok.extern.slf4j.Slf4j;
 import org.bardframework.commons.utils.ReflectionUtils;
 import org.bardframework.validator.exception.BardValidationException;
 import org.bardframework.validator.holder.ValidatorHolder;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.Errors;
 import org.springframework.validation.SmartValidator;
@@ -17,9 +16,8 @@ import java.util.stream.Collectors;
 /**
  * Created by zafari on 10/4/2015.
  */
+@Slf4j
 public class BardSmartValidator implements SmartValidator {
-
-    protected static final Logger log = LoggerFactory.getLogger(BardSmartValidator.class);
 
     private final Map<Class<?>, ValidatorHolder> validatorsMap;
     private final Map<Class<?>, List<Class<?>>> superClasses = new ConcurrentHashMap<>();
