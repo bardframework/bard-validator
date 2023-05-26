@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import java.util.ArrayList;
 import java.util.List;
 
-public interface ValidationExceptionController {
+public interface ValidationExceptionControllerAdvice {
 
     @ExceptionHandler(BardValidationException.class)
     @ResponseStatus(HttpStatus.NOT_ACCEPTABLE)
