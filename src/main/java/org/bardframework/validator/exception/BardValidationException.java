@@ -1,10 +1,12 @@
 package org.bardframework.validator.exception;
 
+import lombok.Getter;
 import org.springframework.validation.Errors;
 
 /**
  * Created by v.zafari on 1/26/2016.
  */
+@Getter
 public class BardValidationException extends RuntimeException {
 
     private final transient Errors errors;
@@ -18,7 +20,4 @@ public class BardValidationException extends RuntimeException {
         return this;
     }
 
-    public Errors getErrors() {
-        return errors;
-    }
 }

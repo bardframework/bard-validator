@@ -1,5 +1,6 @@
 package org.bardframework.validator;
 
+import lombok.Getter;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.MessageSource;
 
@@ -9,6 +10,7 @@ import java.util.Locale;
 /**
  * Created by Vahid Zafari on 5/27/2017.
  */
+@Getter
 @Slf4j
 public class FieldValueHolder<T> {
 
@@ -23,14 +25,6 @@ public class FieldValueHolder<T> {
 
     }
 
-    public String getField() {
-        return field;
-    }
-
-    public T getValue() {
-        return value;
-    }
-
     public String translateFieldName(MessageSource messageSource, Locale locale) {
         if (null == messageSource) {
             log.error("null messageSource [{}] in translate field name", (Object) null);
@@ -41,7 +35,4 @@ public class FieldValueHolder<T> {
         return value + " is not acceptable for " + field;
     }
 
-    public Class<?> getClazz() {
-        return clazz;
-    }
 }
