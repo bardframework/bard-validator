@@ -12,7 +12,7 @@ public class DoubleBetweenValidator extends SingleFieldValidatorAbstract<Double>
     protected final double min;
     protected final double max;
 
-    public DoubleBetweenValidator(double max, double min) {
+    public DoubleBetweenValidator(double min, double max) {
         this(min, max, "min_max.error");
     }
 

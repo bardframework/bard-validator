@@ -1,5 +1,6 @@
 package org.bardframework.validator.exception;
 
+import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -21,6 +22,7 @@ public interface ValidationExceptionControllerAdvice {
         if (null != ex.getMessage()) {
             messages.add(ex.getMessage());
         }
+        LoggerFactory.getLogger(this.getClass()).debug("validation error:\n{}", messages);
         return messages;
     }
 }
