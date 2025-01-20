@@ -11,12 +11,12 @@
 
     <groupId>org.bardframework.validator</groupId>
     <artifactId>bard-validator</artifactId>
-    <version>3.9.5</version>
+    <version>3.9.15</version>
 
     <packaging>jar</packaging>
 
     <properties>
-        <bardframework.version>3.9.10</bardframework.version>
+        <bardframework.version>3.9.20</bardframework.version>
     </properties>
 
     <dependencyManagement>
