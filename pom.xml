@@ -15,6 +15,25 @@
 
     <packaging>jar</packaging>
 
+    <name>Bard Framework - Validator</name>
+    <description>Validation utilities for Bard Framework.</description>
+    <url>https://github.com/bardframework/bard-validator</url>
+
+    <licenses>
+        <license>
+            <name>Apache License, Version 2.0</name>
+            <url>https://www.apache.org/licenses/LICENSE-2.0</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <scm>
+        <url>https://github.com/bardframework/bard-validator</url>
+        <connection>scm:git:https://github.com/bardframework/bard-validator.git</connection>
+        <developerConnection>scm:git:git@github.com:bardframework/bard-validator.git</developerConnection>
+        <tag>HEAD</tag>
+    </scm>
+
     <properties>
         <bardframework.version>4.5.10</bardframework.version>
     </properties>
