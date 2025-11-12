@@ -5,18 +5,18 @@
     <parent>
         <groupId>org.bardframework</groupId>
         <artifactId>bard-parent</artifactId>
-        <version>25</version>
+        <version>26</version>
         <relativePath/>
     </parent>
 
     <groupId>org.bardframework.validator</groupId>
     <artifactId>bard-validator</artifactId>
-    <version>4.1.15</version>
+    <version>4.5.5</version>
 
     <packaging>jar</packaging>
 
     <properties>
-        <bardframework.version>4.1.20</bardframework.version>
+        <bardframework.version>4.5.10</bardframework.version>
     </properties>
 
     <dependencyManagement>
