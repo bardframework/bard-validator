@@ -84,4 +84,11 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+
+    <developers>
+        <developer>
+            <name>Vahid Zafari</name>
+            <email>va.zafari@gmail.com</email>
+        </developer>
+    </developers>
 </project>
